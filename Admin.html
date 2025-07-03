@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel - Vāstrāmāya</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #fff; }
+    h1 { text-align: center; }
+    input { display: block; margin: 10px 0; padding: 10px; width: 100%; border-radius: 8px; border: 1px solid #ccc; }
+    button { padding: 10px; background: #333; color: white; border: none; width: 100%; border-radius: 8px; }
+    .preview { margin-top: 20px; border: 1px dashed #aaa; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🛠 Admin Panel (Secret)</h1>
+  <input type="text" id="productName" placeholder="Product Name" />
+  <input type="text" id="productPrice" placeholder="Product Price" />
+  <input type="text" id="productImage" placeholder="Image URL" />
+  <button onclick="addProduct()">Add Product</button>
+
+  <div class="preview" id="preview"></div>
+
+  <script>
+    function addProduct() {
+      const name = document.getElementById("productName").value;
+      const price = document.getElementById("productPrice").value;
+      const image = document.getElementById("productImage").value;
+      const preview = document.getElementById("preview");
+
+      preview.innerHTML += `
+        <div style="border-bottom:1px solid #ddd;margin-top:10px;">
+          <img src="${image}" width="100%" /><br/>
+          <strong>${name}</strong><br/>
+          <span>₹${price}</span>
+        </div>
+      `;
+      alert("Product added in preview. Save manually to site.");
+    }
+  </script>
+</body>
+</html>
