@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - Vāstrāmāya</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f2f2f2; }
+    h1 { text-align: center; }
+    input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 8px; border: 1px solid #ccc; }
+    button { background: #28a745; color: white; border: none; padding: 12px; border-radius: 10px; cursor: pointer; width: 100%; }
+    footer { position: fixed; bottom: 0; left: 0; right: 0; background: #111; color: white; text-align: center; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Checkout</h1>
+  <form onsubmit="event.preventDefault(); placeOrder();">
+    <input type="text" placeholder="Your Name" id="name" required />
+    <input type="tel" placeholder="Mobile Number" id="mobile" required />
+    <textarea placeholder="Delivery Address" id="address" required></textarea>
+    <button type="submit">Place Order</button>
+  </form>
+
+  <footer>
+    <a href="index.html" style="color:white;">Home</a> |
+    <a href="cart.html" style="color:white;">Cart</a> |
+    <a href="orders.html" style="color:white;">Orders</a>
+  </footer>
+
+  <script>
+    function placeOrder() {
+      const name = document.getElementById('name').value;
+      const mobile = document.getElementById('mobile').value;
+      const address = document.getElementById('address').value;
+
+      if (name && mobile && address) {
+        localStorage.setItem('orderInfo', JSON.stringify({ name, mobile, address }));
+        alert("Order placed successfully!");
+        window.location.href = "orders.html";
+      } else {
+        alert("Please fill all fields.");
+      }
+    }
+  </script>
+</body>
+</html>
