@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men - Vāstrāmāya</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #fff;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 10px;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    .name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .price {
+      color: green;
+      margin-bottom: 10px;
+    }
+    .buy-btn {
+      background: #007bff;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #111;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Vāstrāmāya - Men</div>
+    <div class="owner">Owner: MR. DEVESH</div>
+  </header>
+
+  <div class="product">
+    <img src="https://ibb.co/0jMBmbqyalt="Men's Kurta">
+    <div class="name">Stylish Kurta</div>
+    <div class="price">₹999</div>
+    <button class="buy-btn" onclick="alert('Added to cart')">Buy</button>
+  </div>
+
+  <div class="product">
+    <img src="https://ibb.co/Zp3jk1RT" alt="Men's Sherwani">
+    <div class="name">Elegant Sherwani</div>
+    <div class="price">₹1,499</div>
+    <button class="buy-btn" onclick="alert('Added to cart')">Buy</button>
+  </div>
+
+  <footer>
+    <a href="index.html">Home</a>
+    <a href="women.html">Women</a>
+    <a href="jewelry.html">Jewelry</a>
+    <a href="children.html">Children</a>
+  </footer>
+</body>
+</html>
